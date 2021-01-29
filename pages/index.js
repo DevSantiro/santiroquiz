@@ -36,7 +36,7 @@ export default function Home() {
             <h1>Quem é esse Pokemon</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>DAFSGHJKJHREGTRSHR....</p>
+            <p>Paragrafo teste para visualizar mudanças no Versel</p>
           </Widget.Content>
         </Widget>
         <Widget>
