@@ -3,8 +3,9 @@ import styled from 'styled-components'
 const Widget = styled.div`
     margin-top: 24px;
     margin-bottom: 24px;
-    border: 1px solid ${({ theme }) => theme.colors.secondary };;
-    background-color: ${({ theme }) => theme.colors.primary };;
+    border: 2px solid ${({ theme }) => theme.colors.mainBg };
+    background-color: ${({ theme }) => theme.colors.secondary };
+    box-shadow: 12px 4px 9px 2px rgba(0,0,0,0.64);
     border-radius: 4px;
     overflow: hidden;
 
@@ -19,6 +20,27 @@ const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
     }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+/* 
+    button{
+        border-radius: 5px;
+        display: block;
+        background: #ffa000;
+        font-weight: bold;
+        padding: 0.5em;
+        color: rgb(255,255,255);
+    }
+
+    button:hover{
+        background: #ffca28;
+        border-color: aliceblue;
+    } 
+*/
+
     `;
 
     Widget.Header = styled.header `
@@ -44,6 +66,25 @@ const Widget = styled.div`
     padding: 0;
     }
 
+
+`;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+  
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
 `;
 
 export default Widget;
